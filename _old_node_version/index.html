@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO + pristupačnost: kratak opis stranice za tražilice i pomoćne tehnologije -->
+    <meta name="description" content="Početna stranica s vremenskim podacima, tablicom, navigacijom i izdvojenim vremenskim prikazom.">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+    <title>Filmski podaci</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <div class="branding">
+                <p class="eyebrow">LV1</p>
+                <h1>Netflix filmovi</h1>
+            </div>
+            <div class="nav-holder">
+                <a href="#main-nav" class="menu-button" aria-label="Prikaži ili sakrij navigaciju">Izbornik</a>
+                <nav id="main-nav" aria-label="Glavna navigacija">
+                    <ul class="nav-list">
+                        <li><a href="index.html" aria-current="page">Početna</a></li>
+                        <li><a href="grafikon.html">Grafikon</a></li>
+                        <li><a href="slike.html">Galerija</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main class="page-main">
+        <section class="intro" aria-labelledby="uvod-naslov">
+            <article>
+                <h2 id="uvod-naslov">Dobrodošli!</h2>
+                <p>Dobrodošli! Ovdje možete pregledati popularne Netflix filmove.</p>
+            </article>
+        </section>
+        <section class="content-grid" aria-labelledby="podaci-naslov">
+            <article class="table-card">
+                    <h2 id="podaci-naslov">Tablica filmova</h2>
+
+                    <div class="filteri">
+                        <div class="filter-dropdown">
+                            <p>Žanr:</p>
+                            <button type="button" id="genre-toggle" class="dropdown-toggle">Svi žanrovi</button>
+                            <div id="genre-options" class="dropdown-options"></div>
+                        </div>
+
+                        <div class="filter-dropdown">
+                            <p>Godina:</p>
+                            <button type="button" id="year-toggle" class="dropdown-toggle">Sve godine</button>
+                            <div id="year-options" class="dropdown-options"></div>
+                        </div>
+
+                        <label>
+                            Ocjena:
+                            <select id="filter-rating">
+                                <option value="">Sve ocjene</option>
+                            </select>
+                        </label>
+
+                        <button id="reset-filteri" type="button">Poništi filtre</button>
+                    </div>
+
+                    <div class="table-wrap" role="region" aria-label="Tablica filmskih podataka">
+                        <table id="movies-table">
+                            <caption>Podaci o filmovima</caption>
+                            <thead>
+                                <tr>
+                                    <th>Naslov</th>
+                                    <th>Žanr</th>
+                                    <th>Godina</th>
+                                    <th>Trajanje</th>
+                                    <th>Ocjena</th>
+                                    <th>Akcija</th>
+                                </tr>
+                            </thead>
+                            <tbody id="movies-table-body"></tbody>
+                        </table>
+                    </div>
+                </article>
+            <aside class="info-aside" aria-labelledby="aside-naslov">
+                <h2 id="aside-naslov">Preporučeni film</h2>
+                <picture>
+                    <source
+                        media="(max-width: 768px)"
+                        srcset="https://images.unsplash.com/photo-1500674425229-f692875b0ab7?auto=format&fit=crop&w=800&q=80">
+                    <img
+                        src="https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m7haRef0WH.jpg"
+                        loading="lazy">
+                </picture>
+                <article class="mini-card" aria-labelledby="zakljucak-naslov">
+                    <h3 id="zakljucak-naslov">Napomena</h3>
+                    <p>Morate pogledati ovaj film.</p>
+                </article>
+            </aside>
+        </section>
+        <section class="kosarica-card" aria-labelledby="kosarica-naslov">
+            <h2 id="kosarica-naslov">Košarica za posudbu</h2>
+
+            <p id="kosarica-status" class="kosarica-status">Košarica je prazna.</p>
+
+            <div class="table-wrap">
+                <table id="kosarica-tablica">
+                    <caption>Odabrani filmovi</caption>
+                    <thead>
+                        <tr>
+                            <th>Naslov</th>
+                            <th>Akcija</th>
+                        </tr>
+                    </thead>
+                    <tbody id="kosarica-body"></tbody>
+                </table>
+            </div>
+            <button id="potvrdi-posudbu" type="button" class="confirm-button">
+                Potvrdi posudbu
+            </button>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <p>&copy; 2025. Web programiranje - LV1 zadatak</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

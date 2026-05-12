@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO meta tag: opis stranice galerije za tražilice i pristupačnost -->
+    <meta name="description" content="Galerija vremenskih fotografija">
+    <title>Vremenski podaci | Galerija</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style_slike.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <div class="branding">
+                <p class="eyebrow">LV1</p>
+                <h1>Galerija filmova</h1>
+            </div>
+            <div class="nav-holder">
+                <a href="#main-nav" class="menu-button" aria-label="Prikaži ili sakrij navigaciju">Izbornik</a>
+                <nav id="main-nav" aria-label="Glavna navigacija">
+                    <ul class="nav-list">
+                        <li><a href="index.html">Početna</a></li>
+                        <li><a href="grafikon.html">Grafikon</a></li>
+                        <li><a href="slike.html" aria-current="page">Galerija</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main class="page-main">
+        <section class="intro" aria-labelledby="galerija-uvod-naslov">
+            <article>
+                <h2 id="galerija-uvod-naslov">Galerija slika</h2>
+                <p>
+                    Galerija popularnih Netflix filmova.
+                </p>
+            </article>
+        </section>
+        <section class="gallery-page" aria-labelledby="galerija-naslov">
+            <article class="gallery-card">
+                <h2 id="galerija-naslov">Pregled filmova</h2>
+                <p class="section-text">
+                </p>
+                <div class="img-gallery-magnific" aria-label="Galerija slika vremenskih uvjeta">
+                    <figure class="magnific-img">
+                        <a href="#img1" class="image-popup-vertical-fit">
+                            <picture>
+                                <img src="images/Extraction.jpg" alt="Extraction" loading="lazy">
+                            </picture>
+                        </a>
+                        <figcaption>Extraction</figcaption>
+                    </figure>
+                    <figure class="magnific-img">
+                        <a href="#img2" class="image-popup-vertical-fit">
+                            <picture>
+                                <img src="images/Bird Box.jpg" alt="Bird Box" loading="lazy">
+                            </picture>
+                        </a>
+                        <figcaption>Bird Box</figcaption>
+                    </figure>
+                    <figure class="magnific-img">
+                        <a href="#img3" class="image-popup-vertical-fit">
+                            <picture>
+                                <img src="images/The Irishman.jpg" alt="The Irishman" loading="lazy">
+                            </picture>
+                        </a>
+                        <figcaption>The Irishman</figcaption>
+                    </figure>
+                </div>
+            </article>
+        </section>
+        <div id="img1" class="lightbox">
+            <a href="#" class="lightbox-close" aria-label="Zatvori prikaz slike">Zatvori</a>
+            <img src="images/Extraction.jpg">
+        </div>
+        <div id="img2" class="lightbox">
+            <a href="#" class="lightbox-close" aria-label="Zatvori prikaz slike">Zatvori</a>
+            <img src="images/Bird Box.jpg">
+        </div>
+        <div id="img3" class="lightbox">
+            <a href="#" class="lightbox-close" aria-label="Zatvori prikaz slike">Zatvori</a>
+            <img src="images/The Irishman.jpg">
+        </div>
+    </main>
+    <footer class="site-footer">
+        <p>&copy; 2025. Web programiranje - LV1 zadatak</p>
+    </footer>
+</body>
+</html>

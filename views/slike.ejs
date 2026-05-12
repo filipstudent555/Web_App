@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <title>Galerija filmova</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/style_slike.css">
+</head>
+<body>
+
+<h1>Galerija filmova</h1>
+
+<section class="img-gallery-magnific">
+
+    <% images.forEach(image => { %>
+        <figure class="magnific-img">
+            <a href="#<%= image.id %>">
+                <img src="<%= image.url %>" alt="<%= image.title %>">
+            </a>
+            <figcaption><%= image.title %></figcaption>
+        </figure>
+    <% }) %>
+
+</section>
+
+<% images.forEach(image => { %>
+    <div id="<%= image.id %>" class="lightbox">
+        <a href="#">Zatvori</a>
+        <img src="<%= image.url %>">
+    </div>
+<% }) %>
+
+</body>
+</html>

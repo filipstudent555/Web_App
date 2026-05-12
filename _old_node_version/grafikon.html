@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO meta tag: opis sadržaja stranice za tražilice i pristupačnost -->
+    <meta name="description" content="Grafički prikaz vremenskih podataka.">
+    <title>Filmski podaci | Grafikon</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <div class="branding">
+                <p class="eyebrow">LV1</p>
+                <h1>Vizualizacija Netflix filmova</h1>
+            </div>
+
+            <div class="nav-holder">
+                <a href="#main-nav" class="menu-button" aria-label="Prikaži ili sakrij navigaciju">Izbornik</a>
+
+                <nav id="main-nav" aria-label="Glavna navigacija">
+                    <ul class="nav-list">
+                        <li><a href="index.html">Početna</a></li>
+                        <li><a href="grafikon.html" aria-current="page">Grafikon</a></li>
+                        <li><a href="slike.html">Galerija</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="page-main">
+        <section class="intro" aria-labelledby="grafikon-uvod-naslov">
+            <article>
+                <h2 id="grafikon-uvod-naslov">Pregled podataka</h2>
+                <p>Prikaz raspodjele filmova po žanrovima.</p>
+            </article>
+        </section>
+
+        <section class="chart-layout" aria-labelledby="chart-naslov">
+            <article class="chart-card">
+                <h2 id="chart-naslov">Raspodjela filmova po žanru</h2>
+                <!-- bar chart -->
+                <div class="bar-chart" role="img" aria-label="Stupčasti grafikon raspodjele lokacija: inland 7, mountain 5, coastal 5">
+                    <div class="chart-grid" aria-hidden="true">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="bars">
+                        <div class="bar-item">
+                            <div class="bar bar-1" style="--bar-height: 70%;">
+                                <span class="bar-value">7</span>
+                            </div>
+                            <p>Komedija</p>
+                        </div>
+                        <div class="bar-item">
+                            <div class="bar bar-2" style="--bar-height: 50%;">
+                                <span class="bar-value">5</span>
+                            </div>
+                            <p>Drama</p>
+                        </div>
+
+                        <div class="bar-item">
+                            <div class="bar bar-3" style="--bar-height: 50%;">
+                                <span class="bar-value">5</span>
+                            </div>
+                            <p>Krimi</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="pie-chart-card" role="img" aria-label="Kružni grafikon raspodjele lokacija: inland 7, mountain 5, coastal 5">
+                    <div class="pie-chart-weather"></div>
+
+                    <div class="chart-legend" aria-label="Legenda grafikona">
+                        <div class="legend-item">
+                            <span class="legend-color legend-1"></span>
+                            <span>Inland - 7</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-color legend-2"></span>
+                            <span>Mountain - 5</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-color legend-3"></span>
+                            <span>Coastal - 5</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <aside class="info-aside" aria-labelledby="analiza-aside-naslov">
+                <h2 id="analiza-aside-naslov">Kratka analiza</h2>
+
+                <article class="mini-card">
+                    <h3>Što grafikon prikazuje?</h3>
+                    <p>Količinu filmova po žanru.</p>
+                </article>
+
+                <article class="mini-card">
+                    <h3>Upute</h3>
+                    <p>Jednostavno iščitavanje podataka sa grafa!</p>
+                </article>
+            </aside>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <p>&copy; 2025. Web programiranje - LV1 zadatak</p>
+    </footer>
+</body>
+</html>
